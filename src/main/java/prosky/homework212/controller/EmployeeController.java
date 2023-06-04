@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import prosky.homework212.model.Employee;
 import prosky.homework212.service.EmployeeService;
 
+import java.util.Collection;
+
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -30,10 +32,11 @@ public class EmployeeController {
     public Employee find(@RequestParam String firstName, @RequestParam String lastName) {
         return employeeService.find(firstName, lastName);
     }
+
     @GetMapping("/findAll")
-    public Collection <Employee> findAll()  {
+    public Collection<Employee> findAll() {
         return employeeService.findAll();
     }
 
 
-
+}

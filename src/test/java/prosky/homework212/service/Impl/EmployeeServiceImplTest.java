@@ -63,7 +63,7 @@ public void shouldReturnAllEmployees(){
 Employee employee1 = employeeService.add(FIRST_NAME,LAST_NAME,SALARY,DEPARTMENT_ID);
 Employee employee2 = employeeService.add(FIRST_NAME2,LAST_NAME2,SALARY,DEPARTMENT_ID);
 Collection<Employee> addadEmployees = employeeService.findAll();
-assertIterableEquals(List.of(employee1, employee2),addadEmployees);}
+assertIterableEquals(List.of(employee1, employee2),addadEmployees); }
 
 
 
