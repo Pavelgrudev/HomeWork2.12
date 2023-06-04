@@ -6,7 +6,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import prosky.homework212.exception.EmployeeNotFoundException;
 import prosky.homework212.service.EmployeeService;
-
 import static java.util.Collections.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -34,7 +33,7 @@ class DepartmentServiceImplTest {
     @Test
     public void shouldReturnEmployeeWithMaxSalaryByOtherDepartmentId(){
         when(employeeService.findAll()).thenReturn(EMPLOYEES);
-        assertEquals(MAX_SALARY_EMPLOYEE, departmentService.findEmployeeWithMaxSalary(DEPARTMENT_ID2));
+        assertEquals(MAX_SALARY_EMPLOYEE, departmentService.findEmployeeWithMaxSalary(DEPARTMENT_ID));
     }
     @Test
     public void shouldReturnEmployeeWithMixSalaryByDepartmentId(){
@@ -50,7 +49,7 @@ class DepartmentServiceImplTest {
     @Test
     public void shouldReturnEmployeeWithMinSalaryByOtherDepartmentId(){
         when(employeeService.findAll()).thenReturn(EMPLOYEES);
-        assertEquals(MIN_SALARY_EMPLOYEE, departmentService.findEmployeeWithMinSalary(DEPARTMENT_ID2));
+        assertEquals(MIN_SALARY_EMPLOYEE, departmentService.findEmployeeWithMinSalary(DEPARTMENT_ID));
     }
     @Test
     public void shouldFindEmployeeByDepartmentId(){

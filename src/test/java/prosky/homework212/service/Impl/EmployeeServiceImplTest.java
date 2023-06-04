@@ -47,9 +47,10 @@ public void shouldRemoveExistsEmployee(){
     Employee addedEmployee = employeeService.add(FIRST_NAME,LAST_NAME,SALARY,DEPARTMENT_ID);
     assertEquals(1, employeeService.findAll().size());
     assertTrue(employeeService.findAll().contains(addedEmployee));
+
         Employee removedEmployee= employeeService.remove(FIRST_NAME,LAST_NAME);{
         assertEquals(addedEmployee,removedEmployee);
-        assertEquals(0, employeeService.findAll().size());
+        assertEquals(0 ,employeeService.findAll().size());
         assertTrue(employeeService.findAll().contains(addedEmployee));}
     }
     @Test
